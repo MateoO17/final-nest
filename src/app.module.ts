@@ -2,6 +2,10 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RefrigerioModule } from './refrigerio/refrigerio.module';
+import { InstitucionModule } from './institucion/institucion.module';
+import { UserModule } from './user/user.module';
+import { RolModule } from './rol/rol.module';
+import { DocModule } from './doc/doc.module';
 
 @Module({
   imports: [
@@ -25,6 +29,10 @@ import { RefrigerioModule } from './refrigerio/refrigerio.module';
       }),
     }),
     RefrigerioModule,
+    InstitucionModule,
+    UserModule,
+    RolModule,
+    DocModule,
   ],
 })
 export class AppModule {}
